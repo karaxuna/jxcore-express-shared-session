@@ -1,0 +1,8 @@
+{
+    "name": "jxcore-express-shared-session",
+    "description": "Sharing session across mutiple nodejs http server instances.",
+    "dependencies": {
+        "express": "4.13.3",
+        "express-session": "1.11.3"
+    }
+}

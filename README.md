@@ -1,6 +1,6 @@
 ### How to share session across mutiple nodejs http server instances
 
-Nodejs applications can now run on multiple threads using [JXcore's multithreading feature](http://jxcore.com/multithreaded-javascript-tasks/). Threads randomly handle requests from clients, that gives great performance boost. Each task has it's own isolated memory. Sometimes you need to share data among multiple tasks. Good example is a need to share session data in `express` application. First, you need to install `express` and `express-session` modules:
+Nodejs applications can now run on multiple threads using [JXcore's multithreading feature](http://jxcore.com/multithreaded-javascript-tasks/). Threads randomly handle requests from clients, that gives great performance boost. Each task has it's own isolated memory. Sometimes you need to share data among multiple tasks. Good example is a need to share session data in `express` application. In this tutorial, I will show how to do it. First, you need to install `express` and `express-session` modules:
 
 ```bash
 npm install express@4.13.3 --save

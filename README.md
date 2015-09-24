@@ -9,8 +9,8 @@ Each instance has it's own isolated memory. Sometimes you need to share data amo
 Assuming you already have installed JXcore from [downloads page](http://jxcore.com/downloads), the next step is to install express and express-session modules:
 
 ```bash
-npm install express@4.13.3 --save
-npm install express-session@1.11.3 --save
+jx install express@4.13.3 --save
+jx install express-session@1.11.3 --save
 ```
 
 Implement class that will inherit from `require('express-session').Store`:

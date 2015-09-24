@@ -50,7 +50,7 @@ JXSessionStore.prototype.destroy = function (sessionId, callback) {
 }
 ```
 
-When you call `req.session.foo = "bar";` in express route, then `JXSessionStore.prototype.set` function is called and data is stored in `jxcore.store.shared`, which is shared memory across JXcore tasks. So whenever any task requests session value, `JXSessionStore.prototype.get` function gets called and returns shared data. Now let's create express app:
+When you set property of `req.session` object, then `JXSessionStore.prototype.set` function is called and data is stored in `jxcore.store.shared`, which is shared memory across JXcore tasks. So whenever any task gets value from `req.session` object's property, `JXSessionStore.prototype.get` function gets called and returns shared data. So we just changed session object's getter and setter logic. Now let's create express app:
 
 ```javascript
 var app = require('express')(),
